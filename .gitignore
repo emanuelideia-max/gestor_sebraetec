@@ -15,3 +15,6 @@ data/.cookie_secret
 .claude/
 plugins/
 skills/
+
+# capturas de tela com dados de clientes
+apresentacao/

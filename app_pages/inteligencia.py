@@ -6,7 +6,7 @@ import plotly.graph_objects as go
 import streamlit as st
 
 from core import data, insights
-from core.ui import marca, cores, brl, kpi_w, label_limit, num, filtros
+from core.ui import marca, md, cores, brl, kpi_w, label_limit, num, filtros
 
 AZUL, LARANJA, _ = marca()
 
@@ -38,7 +38,7 @@ with st.container(horizontal=True):
 with st.container(border=True):
     st.subheader(":material/radar: Radar", anchor=False)
     for icone, cor, texto in insights.alertas(df):
-        st.markdown(f":{cor}[{icone}] {texto}")
+        st.markdown(f":{cor}[{icone}] {md(texto)}")
 
 # ---------------------------------------------------------------- risco
 col1, col2 = st.columns([3, 2])

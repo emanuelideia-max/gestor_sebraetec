@@ -80,6 +80,11 @@ def data_br(d) -> str:
     return "—" if pd.isna(d) else pd.Timestamp(d).strftime("%d/%m/%Y")
 
 
+def md(texto: str) -> str:
+    """Escapa o "$" para Markdown: dois "R$" no mesmo texto virariam fórmula matemática."""
+    return texto.replace("$", r"\$")
+
+
 MOEDA = st.column_config.NumberColumn(format="localized")
 
 

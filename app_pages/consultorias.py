@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 
 from core import data, insights, pdf
-from core.ui import kpi_w, brl, data_br, is_phone, num
+from core.ui import kpi_w, brl, md, data_br, is_phone, num
 
 df = data.consultorias_view()
 t = data.tables()
@@ -263,7 +263,7 @@ with st.container(horizontal=True, vertical_alignment="center"):
 
 with st.container(horizontal=True):
     st.metric("Valor total", brl(row["valor_total"], 2), border=True, width=kpi_w())
-    st.metric("Subsídio / contrapartida", f"{brl(row['subsidio'])} / {brl(row['contrapartida'])}", border=True, width=kpi_w())
+    st.metric("Subsídio / contrapartida", md(f"{brl(row['subsidio'])} / {brl(row['contrapartida'])}"), border=True, width=kpi_w())
     st.metric("Carga horária", f"{num(row['carga_horaria'])} h · {brl(row['valor_hora'], 2)}/h", border=True, width=kpi_w())
     st.metric("Período (proposta)", f"{data_br(row['data_inicio'])} a {data_br(row['data_fim'])}", border=True, width=kpi_w())
 
