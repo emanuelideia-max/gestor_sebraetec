@@ -1,0 +1,224 @@
+codigo_ibge,nome,mesorregiao,lon,lat
+2500205,Aguiar,Sertão Paraibano,-38.23168,-7.09449
+2500304,Alagoa Grande,Agreste Paraibano,-35.60466,-7.03792
+2500403,Alagoa Nova,Agreste Paraibano,-35.76946,-7.06306
+2500502,Alagoinha,Agreste Paraibano,-35.54357,-6.96311
+2500536,Alcantil,Borborema,-36.0459,-7.69263
+2500577,Algodão de Jandaíra,Agreste Paraibano,-35.93809,-6.89166
+2500601,Alhandra,Mata Paraibana,-34.92952,-7.35034
+2500734,Amparo,Borborema,-37.04583,-7.56169
+2500775,Aparecida,Sertão Paraibano,-38.06431,-6.79838
+2500908,Arara,Agreste Paraibano,-35.73313,-6.85383
+2501005,Araruna,Agreste Paraibano,-35.74194,-6.53372
+2500809,Araçagi,Agreste Paraibano,-35.35713,-6.85269
+2501104,Areia,Agreste Paraibano,-35.69359,-6.95457
+2501153,Areia de Baraúnas,Sertão Paraibano,-36.97538,-7.11839
+2501203,Areial,Agreste Paraibano,-35.93539,-7.04894
+2501302,Aroeiras,Agreste Paraibano,-35.7038,-7.51987
+2501351,Assunção,Borborema,-36.70938,-7.0774
+2501500,Bananeiras,Agreste Paraibano,-35.60049,-6.68315
+2501534,Baraúna,Borborema,-36.26431,-6.61433
+2501609,Barra de Santa Rosa,Agreste Paraibano,-35.98477,-6.74548
+2501575,Barra de Santana,Borborema,-35.96876,-7.57079
+2501708,Barra de São Miguel,Borborema,-36.25665,-7.68829
+2501807,Bayeux,Mata Paraibana,-34.91674,-7.12223
+2501401,Baía da Traição,Mata Paraibana,-34.97489,-6.66885
+2501906,Belém,Agreste Paraibano,-35.50638,-6.71753
+2502003,Belém do Brejo do Cruz,Sertão Paraibano,-37.37886,-6.15315
+2502052,Bernardino Batista,Sertão Paraibano,-38.56034,-6.48229
+2502102,Boa Ventura,Sertão Paraibano,-38.20733,-7.4193
+2502151,Boa Vista,Agreste Paraibano,-36.19311,-7.28867
+2502201,Bom Jesus,Sertão Paraibano,-38.63011,-6.82583
+2502300,Bom Sucesso,Sertão Paraibano,-37.96119,-6.46815
+2502409,Bonito de Santa Fé,Sertão Paraibano,-38.47475,-7.29089
+2502508,Boqueirão,Borborema,-36.13951,-7.51177
+2502706,Borborema,Agreste Paraibano,-35.57544,-6.78922
+2502805,Brejo do Cruz,Sertão Paraibano,-37.49404,-6.32497
+2502904,Brejo dos Santos,Sertão Paraibano,-37.85912,-6.39601
+2503001,Caaporã,Mata Paraibana,-34.92103,-7.48678
+2503100,Cabaceiras,Borborema,-36.27236,-7.46524
+2503209,Cabedelo,Mata Paraibana,-34.84412,-7.03547
+2503308,Cachoeira dos Índios,Sertão Paraibano,-38.70907,-6.94453
+2503407,Cacimba de Areia,Sertão Paraibano,-37.15879,-7.14392
+2503506,Cacimba de Dentro,Agreste Paraibano,-35.79616,-6.63421
+2503555,Cacimbas,Sertão Paraibano,-37.09877,-7.21408
+2503605,Caiçara,Agreste Paraibano,-35.41053,-6.60436
+2503704,Cajazeiras,Sertão Paraibano,-38.55859,-6.94319
+2503753,Cajazeirinhas,Sertão Paraibano,-37.80885,-6.95251
+2503803,Caldas Brandão,Agreste Paraibano,-35.33866,-7.1225
+2503902,Camalaú,Borborema,-36.7857,-7.91181
+2504009,Campina Grande,Agreste Paraibano,-35.91224,-7.26679
+2504033,Capim,Mata Paraibana,-35.17268,-6.8995
+2504074,Caraúbas,Borborema,-36.5181,-7.76786
+2504108,Carrapateira,Sertão Paraibano,-38.32518,-7.05025
+2504157,Casserengue,Agreste Paraibano,-35.84674,-6.75334
+2504207,Catingueira,Sertão Paraibano,-37.6108,-7.18334
+2504306,Catolé do Rocha,Sertão Paraibano,-37.70476,-6.31149
+2504355,Caturité,Borborema,-36.05378,-7.41424
+2504405,Conceição,Sertão Paraibano,-38.52383,-7.50639
+2504504,Condado,Sertão Paraibano,-37.62013,-6.87463
+2504603,Conde,Mata Paraibana,-34.8592,-7.29237
+2504702,Congo,Borborema,-36.63298,-7.79657
+2504801,Coremas,Sertão Paraibano,-37.97547,-7.07131
+2504850,Coxixola,Borborema,-36.62419,-7.67927
+2504900,Cruz do Espírito Santo,Mata Paraibana,-35.11487,-7.17099
+2505006,Cubati,Borborema,-36.34091,-6.85115
+2505204,Cuitegi,Agreste Paraibano,-35.51683,-6.899
+2505105,Cuité,Agreste Paraibano,-36.07472,-6.5251
+2505238,Cuité de Mamanguape,Mata Paraibana,-35.25027,-6.90903
+2505303,Curral Velho,Sertão Paraibano,-38.1987,-7.53854
+2505279,Curral de Cima,Mata Paraibana,-35.28259,-6.73019
+2505352,Damião,Agreste Paraibano,-35.93732,-6.67466
+2505402,Desterro,Sertão Paraibano,-37.09898,-7.30497
+2505600,Diamante,Sertão Paraibano,-38.31615,-7.43904
+2505709,Dona Inês,Agreste Paraibano,-35.63525,-6.60718
+2505808,Duas Estradas,Agreste Paraibano,-35.39442,-6.7205
+2505907,Emas,Sertão Paraibano,-37.76723,-7.09413
+2506004,Esperança,Agreste Paraibano,-35.87758,-7.00317
+2506103,Fagundes,Agreste Paraibano,-35.79554,-7.39393
+2506202,Frei Martinho,Borborema,-36.43962,-6.41046
+2506251,Gado Bravo,Agreste Paraibano,-35.81734,-7.58062
+2506301,Guarabira,Agreste Paraibano,-35.46452,-6.87344
+2506400,Gurinhém,Agreste Paraibano,-35.42834,-7.14447
+2506509,Gurjão,Borborema,-36.47813,-7.27575
+2506608,Ibiara,Sertão Paraibano,-38.3979,-7.50839
+2502607,Igaracy,Sertão Paraibano,-38.11755,-7.14362
+2506707,Imaculada,Sertão Paraibano,-37.54877,-7.3706
+2506806,Ingá,Agreste Paraibano,-35.63287,-7.26784
+2506905,Itabaiana,Agreste Paraibano,-35.36195,-7.35035
+2507002,Itaporanga,Sertão Paraibano,-38.22565,-7.28814
+2507101,Itapororoca,Mata Paraibana,-35.25954,-6.8172
+2507200,Itatuba,Agreste Paraibano,-35.6354,-7.42427
+2507309,Jacaraú,Mata Paraibana,-35.27245,-6.6015
+2507408,Jericó,Sertão Paraibano,-37.80714,-6.50656
+2513653,Joca Claudino,Sertão Paraibano,-38.48589,-6.47444
+2507507,João Pessoa,Mata Paraibana,-34.86865,-7.15388
+2507606,Juarez Távora,Agreste Paraibano,-35.56295,-7.16795
+2507705,Juazeirinho,Borborema,-36.59905,-7.0278
+2507804,Junco do Seridó,Borborema,-36.74208,-6.98859
+2507903,Juripiranga,Mata Paraibana,-35.21827,-7.35658
+2508000,Juru,Sertão Paraibano,-37.80038,-7.52273
+2508109,Lagoa,Sertão Paraibano,-37.89783,-6.58853
+2508307,Lagoa Seca,Agreste Paraibano,-35.86233,-7.14149
+2508208,Lagoa de Dentro,Agreste Paraibano,-35.36178,-6.68546
+2508406,Lastro,Sertão Paraibano,-38.1867,-6.55669
+2508505,Livramento,Borborema,-36.92059,-7.35822
+2508554,Logradouro,Agreste Paraibano,-35.43358,-6.54231
+2508604,Lucena,Mata Paraibana,-34.90152,-6.92878
+2508802,Malta,Sertão Paraibano,-37.52478,-6.88817
+2508901,Mamanguape,Mata Paraibana,-35.14877,-6.70345
+2509008,Manaíra,Sertão Paraibano,-38.19992,-7.72492
+2509057,Marcação,Mata Paraibana,-34.98376,-6.74994
+2509107,Mari,Mata Paraibana,-35.30432,-7.03356
+2509156,Marizópolis,Sertão Paraibano,-38.3376,-6.8215
+2509206,Massaranduba,Agreste Paraibano,-35.74992,-7.21158
+2509305,Mataraca,Mata Paraibana,-35.05385,-6.55666
+2509339,Matinhas,Agreste Paraibano,-35.78118,-7.11577
+2509370,Mato Grosso,Sertão Paraibano,-37.73878,-6.55195
+2509396,Maturéia,Sertão Paraibano,-37.35759,-7.28457
+2509404,Mogeiro,Agreste Paraibano,-35.48395,-7.28577
+2509503,Montadas,Agreste Paraibano,-35.94265,-7.09481
+2509602,Monte Horebe,Sertão Paraibano,-38.51916,-7.2066
+2509701,Monteiro,Borborema,-37.16261,-7.91513
+2509800,Mulungu,Agreste Paraibano,-35.40546,-6.99553
+2508703,Mãe d'Água,Sertão Paraibano,-37.42987,-7.24452
+2509909,Natuba,Agreste Paraibano,-35.56251,-7.56055
+2510006,Nazarezinho,Sertão Paraibano,-38.33335,-6.95318
+2510105,Nova Floresta,Agreste Paraibano,-36.19622,-6.46502
+2510204,Nova Olinda,Sertão Paraibano,-38.03511,-7.46245
+2510303,Nova Palmeira,Borborema,-36.43592,-6.67544
+2510402,Olho d'Água,Sertão Paraibano,-37.72287,-7.29968
+2510501,Olivedos,Agreste Paraibano,-36.22485,-6.99863
+2510600,Ouro Velho,Borborema,-37.13038,-7.61113
+2510659,Parari,Borborema,-36.66353,-7.32867
+2510709,Passagem,Sertão Paraibano,-37.04057,-7.1182
+2510808,Patos,Sertão Paraibano,-37.34369,-7.00777
+2510907,Paulista,Sertão Paraibano,-37.60107,-6.59799
+2511004,Pedra Branca,Sertão Paraibano,-38.06851,-7.46617
+2511103,Pedra Lavrada,Borborema,-36.41911,-6.78062
+2511202,Pedras de Fogo,Mata Paraibana,-35.07221,-7.35637
+2512721,Pedro Régis,Mata Paraibana,-35.28654,-6.67438
+2511301,Piancó,Sertão Paraibano,-37.96419,-7.15899
+2511400,Picuí,Borborema,-36.35542,-6.50616
+2511509,Pilar,Mata Paraibana,-35.26878,-7.27402
+2511608,Pilões,Agreste Paraibano,-35.61469,-6.88319
+2511707,Pilõezinhos,Agreste Paraibano,-35.53022,-6.84572
+2511806,Pirpirituba,Agreste Paraibano,-35.47843,-6.77566
+2511905,Pitimbu,Mata Paraibana,-34.84162,-7.44154
+2512002,Pocinhos,Agreste Paraibano,-36.08158,-7.03753
+2512101,Pombal,Sertão Paraibano,-37.86848,-6.80887
+2512036,Poço Dantas,Sertão Paraibano,-38.52645,-6.38426
+2512077,Poço de José de Moura,Sertão Paraibano,-38.49345,-6.59645
+2512200,Prata,Borborema,-37.10149,-7.69218
+2512309,Princesa Isabel,Sertão Paraibano,-38.00324,-7.64768
+2512408,Puxinanã,Agreste Paraibano,-35.95096,-7.15468
+2512507,Queimadas,Agreste Paraibano,-35.92103,-7.4103
+2512606,Quixaba,Sertão Paraibano,-37.12533,-7.04798
+2512705,Remígio,Agreste Paraibano,-35.85862,-6.93176
+2512788,Riacho de Santo Antônio,Borborema,-36.13461,-7.66677
+2512804,Riacho dos Cavalos,Sertão Paraibano,-37.60695,-6.5083
+2512747,Riachão,Agreste Paraibano,-35.63893,-6.55079
+2512754,Riachão do Bacamarte,Agreste Paraibano,-35.66279,-7.24502
+2512762,Riachão do Poço,Mata Paraibana,-35.29374,-7.14751
+2512903,Rio Tinto,Mata Paraibana,-35.02999,-6.7879
+2513000,Salgadinho,Borborema,-36.84413,-7.09529
+2513109,Salgado de São Félix,Agreste Paraibano,-35.45823,-7.41766
+2513158,Santa Cecília,Agreste Paraibano,-35.92156,-7.73293
+2513208,Santa Cruz,Sertão Paraibano,-38.05053,-6.54645
+2513307,Santa Helena,Sertão Paraibano,-38.5951,-6.72116
+2513356,Santa Inês,Sertão Paraibano,-38.58001,-7.66829
+2513406,Santa Luzia,Borborema,-36.90872,-6.91846
+2513703,Santa Rita,Mata Paraibana,-34.98819,-7.09392
+2513802,Santa Teresinha,Sertão Paraibano,-37.42962,-7.11013
+2513505,Santana de Mangueira,Sertão Paraibano,-38.33228,-7.63426
+2513604,Santana dos Garrotes,Sertão Paraibano,-37.96865,-7.38484
+2513851,Santo André,Borborema,-36.62391,-7.22283
+2515302,Sapé,Mata Paraibana,-35.21354,-7.05065
+2515500,Serra Branca,Borborema,-36.72483,-7.57709
+2515708,Serra Grande,Sertão Paraibano,-38.38609,-7.2435
+2515807,Serra Redonda,Agreste Paraibano,-35.66354,-7.16582
+2515609,Serra da Raiz,Agreste Paraibano,-35.4404,-6.70247
+2515906,Serraria,Agreste Paraibano,-35.64023,-6.834
+2515930,Sertãozinho,Agreste Paraibano,-35.42296,-6.74223
+2515971,Sobrado,Mata Paraibana,-35.25434,-7.17425
+2516102,Soledade,Agreste Paraibano,-36.34239,-7.12075
+2516003,Solânea,Agreste Paraibano,-35.71941,-6.74344
+2516151,Sossêgo,Agreste Paraibano,-36.19552,-6.69073
+2516201,Sousa,Sertão Paraibano,-38.23737,-6.72163
+2516300,Sumé,Borborema,-36.92426,-7.63877
+2513927,São Bentinho,Sertão Paraibano,-37.70726,-6.89155
+2513901,São Bento,Sertão Paraibano,-37.48868,-6.46177
+2513968,São Domingos,Sertão Paraibano,-37.94697,-6.80607
+2513943,São Domingos do Cariri,Borborema,-36.37614,-7.58039
+2513984,São Francisco,Sertão Paraibano,-38.05276,-6.63346
+2514206,São José da Lagoa Tapada,Sertão Paraibano,-38.11811,-6.94019
+2514305,São José de Caiana,Sertão Paraibano,-38.32539,-7.25007
+2514404,São José de Espinharas,Sertão Paraibano,-37.4033,-6.80323
+2514503,São José de Piranhas,Sertão Paraibano,-38.52609,-7.10284
+2514552,São José de Princesa,Sertão Paraibano,-38.09579,-7.71074
+2514602,São José do Bonfim,Sertão Paraibano,-37.32758,-7.14469
+2514651,São José do Brejo do Cruz,Sertão Paraibano,-37.35078,-6.23642
+2514701,São José do Sabugi,Borborema,-36.81851,-6.84631
+2514800,São José dos Cordeiros,Borborema,-36.86824,-7.40929
+2514453,São José dos Ramos,Mata Paraibana,-35.36008,-7.24678
+2514008,São João do Cariri,Borborema,-36.49706,-7.4423
+2500700,São João do Rio do Peixe,Sertão Paraibano,-38.43181,-6.71474
+2514107,São João do Tigre,Borborema,-36.79566,-8.12017
+2514909,São Mamede,Borborema,-37.07113,-6.93444
+2515005,São Miguel de Taipu,Mata Paraibana,-35.20138,-7.23928
+2515104,São Sebastião de Lagoa de Roça,Agreste Paraibano,-35.86069,-7.08775
+2515203,São Sebastião do Umbuzeiro,Borborema,-37.00846,-8.15197
+2515401,São Vicente do Seridó,Borborema,-36.46328,-6.87512
+2516409,Tacima,Agreste Paraibano,-35.51268,-6.53978
+2516508,Taperoá,Borborema,-36.79824,-7.18906
+2516607,Tavares,Sertão Paraibano,-37.86601,-7.61291
+2516706,Teixeira,Sertão Paraibano,-37.25563,-7.25302
+2516755,Tenório,Borborema,-36.61951,-6.95776
+2516805,Triunfo,Sertão Paraibano,-38.57017,-6.60949
+2516904,Uiraúna,Sertão Paraibano,-38.37446,-6.5184
+2517001,Umbuzeiro,Agreste Paraibano,-35.73855,-7.67957
+2517209,Vieirópolis,Sertão Paraibano,-38.28083,-6.56601
+2505501,Vista Serrana,Sertão Paraibano,-37.56981,-6.7558
+2517100,Várzea,Borborema,-37.03901,-6.79307
+2517407,Zabelê,Borborema,-37.09528,-8.07392
+2500106,Água Branca,Sertão Paraibano,-37.66292,-7.48441

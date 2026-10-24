@@ -1,0 +1,40 @@
+# Gerado pela tela Configurações do sistema. Edite por lá.
+
+[theme]
+font = "Geist:https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"
+headingFont = "Space Grotesk:https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap"
+codeFont = "JetBrains Mono:https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+baseRadius = "8px"
+showWidgetBorder = true
+metricValueFontSize = "1.6rem"
+metricValueFontWeight = 600
+
+[theme.light]
+primaryColor = "#005EB8"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F4F6FA"
+textColor = "#1E293B"
+linkColor = "#005EB8"
+borderColor = "#E3E8F0"
+chartCategoricalColors = ["#005EB8", "#E8833A", "#14B8A6", "#8B5CF6", "#EF4444", "#64748B"]
+
+[theme.light.sidebar]
+backgroundColor = "#F4F6FA"
+
+[theme.dark]
+primaryColor = "#005EB8"
+backgroundColor = "#0B1220"
+secondaryBackgroundColor = "#111B2E"
+textColor = "#E2E8F0"
+linkColor = "#005EB8"
+borderColor = "#1E2B45"
+chartCategoricalColors = ["#005EB8", "#E8833A", "#14B8A6", "#8B5CF6", "#EF4444", "#64748B"]
+
+[theme.dark.sidebar]
+backgroundColor = "#111B2E"
+
+[server]
+runOnSave = true
+
+[client]
+toolbarMode = "minimal"

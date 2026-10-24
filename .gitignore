@@ -1,0 +1,17 @@
+# ambiente e cache
+.venv/
+__pycache__/
+.pytest_cache/
+
+# segredos e dados locais (nunca vão para o GitHub)
+.streamlit/secrets.toml
+data/local.db
+data/.cookie_secret
+
+# planilhas com dados de clientes: os dados ficam no Supabase
+*.xlsx
+
+# ferramentas do editor
+.claude/
+plugins/
+skills/

@@ -1,0 +1,22 @@
+Status:
+1. Confirmação do Gestor
+2. Confirmação do Fornecedor
+3. Agendamento do Encontro
+4. Confirmar encontro (Gestor)
+5. Confirmar encontro (Fornecedor)
+6. Reunião Inicial
+7. Elaboração da proposta (Fornecedor)
+8. Confirmação da proposta (Gestor)
+9. Confirmação da proposta (Cliente)
+10. Anexo da OS (UGAL)
+11. Anexo do Contrato (Gestor)
+12. Assinatura do Contrato (Gerente)
+13. Assinatura do Contrato (Cliente)
+14. Pagamento (Cliente)
+15. Aguardando Início da Consultoria (Fornecedor)
+16. Execução do projeto
+17. Confirmação e assinatura do Relatório Final (Gestor)
+18. Reunião Final
+19. Avaliação do Serviço
+20. Liberação do Pagamento (Gestor)
+21. Consultoria Finalizada
