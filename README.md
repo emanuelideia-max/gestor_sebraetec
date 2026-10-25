@@ -16,7 +16,7 @@ Feito em Streamlit, com banco no Supabase.
 | **Análises** | Filtros no topo da página; visões por cidade, fornecedor (inclui tempo médio em cada etapa), cliente e financeiro; exportação CSV |
 | **Relatórios em PDF** | Relatório para impressão com as seções escolhidas, respeitando os filtros |
 | **Dados e cadastros** | Editor em planilha de tudo: consultorias, clientes, fornecedores, compromissos, lembretes, histórico de etapas e nomes das etapas (editar, acrescentar e excluir). Importação da planilha Excel e exportação no formato original |
-| **Configurações** | Aparência (modo claro/escuro, paletas prontas ou cores próprias, plano de fundo, fonte, cantos), limites dos alertas do Painel, nome da plataforma e logo, situação do banco |
+| **Configurações** | Aparência (modo claro/escuro, paletas prontas ou cores próprias, plano de fundo, fonte, cantos), limites dos alertas do Painel, nome da plataforma, logo da instituição (ex.: Sebrae, mostrada na barra lateral, no login e nos PDFs), situação do banco |
 
 **Nota de risco (0–100)** de cada consultoria ativa: prazo vencido (+50), termina em até 7 dias (+25) ou 15 dias (+10),
 parada na mesma etapa fora da execução há mais de 30 dias (+25) ou 15 dias (+10), início já passou sem entrar em execução
@@ -86,7 +86,7 @@ core/ui.py              filtros, formatação e gráficos
 core/importer.py        leitura da planilha Excel
 core/insights.py        nota de risco, alertas, previsão e benchmark
 core/config_app.py      configurações, tema, plano de fundo e logo
-assets/                 logo (gerada com as cores das Configurações)
+assets/                 logo do app (gerada com as cores das Configurações) e logo da instituição (logo_instituicao.png/.svg)
 core/pdf.py             relatórios em PDF
 data/                   malha e lista de municípios da PB (IBGE)
 supabase/schema.sql     tabelas do banco

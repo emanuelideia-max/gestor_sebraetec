@@ -35,6 +35,14 @@ class Relatorio(FPDF):
         self.add_page()
 
     def header(self):
+        from core.config_app import arquivo_logo_instituicao
+
+        inst = arquivo_logo_instituicao()
+        if inst:
+            try:  # caixa de 34 × 12 mm no canto direito, sem distorcer
+                self.image(str(inst), x=self.w - self.r_margin - 34, y=10, w=34, h=12, keep_aspect_ratio=True)
+            except Exception:
+                pass
         self.set_font("Helvetica", "B", 15)
         self.set_text_color(47, 52, 55)
         self.cell(0, 8, _t(self.titulo), new_x="LMARGIN", new_y="NEXT")

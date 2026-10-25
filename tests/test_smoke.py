@@ -99,3 +99,34 @@ def test_configuracoes_salvar_e_restaurar():
     next(b for b in at.button if b.label == "Salvar configurações").click().run()
     data.refresh()
     assert config_app.carregar()["alerta_prazo_dias"] == config_app.PADRAO["alerta_prazo_dias"]
+
+
+def test_logo_da_instituicao(tmp_path, monkeypatch):
+    import io
+
+    import pytest
+    from PIL import Image
+
+    from core import config_app, data, pdf
+
+    monkeypatch.setattr(config_app, "ROOT", tmp_path)  # não mexer na pasta assets/ do projeto
+    buf = io.BytesIO()
+    Image.new("RGB", (300, 100), "#005EB8").save(buf, "PNG")
+    png = buf.getvalue()
+
+    with pytest.raises(ValueError):
+        config_app.validar_logo(b"nada", "logo.gif")
+    with pytest.raises(ValueError):
+        config_app.validar_logo(b"isto nao e imagem", "logo.png")
+    assert config_app.validar_logo(png, "Logo.PNG") == "png"
+
+    config_app.definir_logo_instituicao(png, "png")
+    data.refresh()
+    assert config_app.arquivo_logo_instituicao() == tmp_path / "assets" / "logo_instituicao.png"
+    assert config_app.carregar()["logo_inst_ext"] == "png"
+    assert pdf.relatorio_geral(data.consultorias_view(), pdf.SECOES).startswith(b"%PDF")
+
+    config_app.definir_logo_instituicao(b"", "")
+    data.refresh()
+    assert config_app.arquivo_logo_instituicao() is None
+    assert config_app.carregar()["logo_inst_dados"] == ""

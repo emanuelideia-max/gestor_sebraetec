@@ -34,6 +34,11 @@ page = st.navigation(
 )
 
 with st.sidebar:
+    inst = config_app.arquivo_logo_instituicao()
+    if inst and cfg.get("logo_inst_posicao") == "Abaixo do menu":
+        st.image(str(inst), width=170)
+    elif inst:  # a da instituição está no topo: a do app vem aqui, discreta
+        st.image(str(config_app.LOGO), width=150)
     with st.container(horizontal=True, vertical_alignment="center"):
         st.caption(f":material/person: {st.session_state.user_email}")
         if st.button("Sair", icon=":material/logout:", type="tertiary"):

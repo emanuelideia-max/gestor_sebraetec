@@ -152,7 +152,13 @@ def login_form() -> None:
     with st.container(horizontal_alignment="center"):
         with st.container(width=380):
             st.space("large")
-            st.image(str(ROOT / "assets" / "logo.svg"), width=260)
+            from core.config_app import arquivo_logo_instituicao
+
+            with st.container(horizontal=True, vertical_alignment="center", gap="large"):
+                inst = arquivo_logo_instituicao()
+                if inst:
+                    st.image(str(inst), width=130)
+                st.image(str(ROOT / "assets" / "logo.svg"), width=210 if inst else 260)
             st.caption("Acompanhamento de consultorias")
             with st.form("login", border=True):
                 email = st.text_input("E-mail", autocomplete="username")

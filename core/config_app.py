@@ -7,8 +7,11 @@ decorativo é aplicado por CSS (pedido explícito do usuário).
 
 from __future__ import annotations
 
+import base64
+import io
 import json
 import os
+from pathlib import Path
 
 import streamlit as st
 
@@ -55,6 +58,9 @@ PADRAO = {
     "bordas": True,
     "alerta_prazo_dias": 15,
     "alerta_parada_dias": 20,
+    "logo_inst_posicao": "Topo da barra lateral",  # ou "Abaixo do menu"
+    "logo_inst_dados": "",                        # arquivo enviado, em base64 (fica no banco)
+    "logo_inst_ext": "",                          # png | jpg | svg
 }
 
 
@@ -231,12 +237,69 @@ def gerar_logos(cfg: dict) -> None:
             arq.write_text(conteudo, encoding="utf-8")
 
 
+# ---------------------------------------------------------------- logo da instituição (ex.: Sebrae)
+
+LOGO_INST_EXTS = ("png", "jpg", "svg")
+POSICOES_LOGO_INST = ["Topo da barra lateral", "Abaixo do menu"]
+
+
+def arquivo_logo_instituicao() -> Path | None:
+    """Arquivo da logo da instituição em assets/ (enviado pelas Configurações ou colocado no repositório)."""
+    for ext in LOGO_INST_EXTS:
+        p = ROOT / "assets" / f"logo_instituicao.{ext}"
+        if p.exists():
+            return p
+    return None
+
+
+def _gravar_logo_instituicao(dados: bytes, ext: str) -> None:
+    for e in LOGO_INST_EXTS:
+        (ROOT / "assets" / f"logo_instituicao.{e}").unlink(missing_ok=True)
+    if dados:
+        (ROOT / "assets").mkdir(exist_ok=True)
+        (ROOT / "assets" / f"logo_instituicao.{ext}").write_bytes(dados)
+
+
+def validar_logo(dados: bytes, nome: str) -> str:
+    """Devolve a extensão normalizada ou levanta ValueError com a explicação."""
+    ext = nome.rsplit(".", 1)[-1].lower().replace("jpeg", "jpg")
+    if ext not in LOGO_INST_EXTS:
+        raise ValueError("Use um arquivo PNG, JPG ou SVG.")
+    if len(dados) > 1_000_000:
+        raise ValueError("O arquivo passa de 1 MB. Use uma versão menor da logo.")
+    if ext == "svg":
+        if b"<svg" not in dados[:2000]:
+            raise ValueError("O arquivo não parece ser um SVG válido.")
+    else:
+        from PIL import Image
+
+        try:
+            Image.open(io.BytesIO(dados)).verify()
+        except Exception as e:
+            raise ValueError("Não foi possível ler a imagem.") from e
+    return ext
+
+
+def definir_logo_instituicao(dados: bytes, ext: str) -> None:
+    cfg = carregar()
+    cfg.update(logo_inst_dados=base64.b64encode(dados).decode() if dados else "", logo_inst_ext=ext if dados else "")
+    salvar(cfg)
+    _gravar_logo_instituicao(dados, ext)
+
+
 def aplicar(cfg: dict | None = None) -> dict:
-    """Chamado a cada execução: garante tema e logo salvos e injeta o plano de fundo."""
+    """Chamado a cada execução: garante tema e logos salvos e injeta o plano de fundo."""
     cfg = cfg or carregar()
     gerar_logos(cfg)
     aplicar_tema(cfg)  # o Streamlit relê o config.toml e aplica o tema sozinho
-    st.logo(str(LOGO), icon_image=str(LOGO_ICONE), size="large")
+    # o banco é a fonte: recria o arquivo se o servidor reiniciou (ex.: Streamlit Cloud)
+    if cfg.get("logo_inst_dados") and not (ROOT / "assets" / f"logo_instituicao.{cfg['logo_inst_ext']}").exists():
+        _gravar_logo_instituicao(base64.b64decode(cfg["logo_inst_dados"]), cfg["logo_inst_ext"])
+    inst = arquivo_logo_instituicao()
+    if inst and cfg.get("logo_inst_posicao") == "Topo da barra lateral":
+        st.logo(str(inst), icon_image=str(inst), size="large")
+    else:
+        st.logo(str(LOGO), icon_image=str(LOGO_ICONE), size="large")
     css = css_fundo(cfg)
     if css:
         st.html(css)

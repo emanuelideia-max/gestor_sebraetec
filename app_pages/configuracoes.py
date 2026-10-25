@@ -1,14 +1,18 @@
 import streamlit as st
 
 from core import config_app
-from core.config_app import FONTES, FUNDOS, PADRAO, PALETAS
+from core.config_app import FONTES, FUNDOS, PADRAO, PALETAS, POSICOES_LOGO_INST
 from core.db import supabase_config
 
 salvo = config_app.carregar()
 
+# O arquivo da logo da instituição é salvo na hora do envio, fora do botão "Salvar configurações".
+ARQUIVO_LOGO = ("logo_inst_dados", "logo_inst_ext")
+EDITAVEIS = [k for k in PADRAO if k not in ARQUIVO_LOGO]
+
 # Valores de trabalho em session_state ("cfg_<campo>"), iniciados com o que está salvo.
-for k, v in salvo.items():
-    st.session_state.setdefault(f"cfg_{k}", v)
+for k in EDITAVEIS:
+    st.session_state.setdefault(f"cfg_{k}", salvo[k])
 
 CORES = ["primaria", "destaque", "claro_fundo", "claro_painel", "claro_texto",
          "escuro_fundo", "escuro_painel", "escuro_texto"]
@@ -26,17 +30,18 @@ def marcar_personalizada() -> None:
 
 
 def desfazer() -> None:
-    for k, v in salvo.items():
-        st.session_state[f"cfg_{k}"] = v
+    for k in EDITAVEIS:
+        st.session_state[f"cfg_{k}"] = salvo[k]
 
 
 def restaurar_padrao() -> None:
-    for k, v in PADRAO.items():
-        st.session_state[f"cfg_{k}"] = v
+    for k in EDITAVEIS:
+        st.session_state[f"cfg_{k}"] = PADRAO[k]
 
 
 def coletar() -> dict:
-    return {k: st.session_state.get(f"cfg_{k}", v) for k, v in PADRAO.items()}
+    cfg = {k: st.session_state.get(f"cfg_{k}", salvo[k]) for k in EDITAVEIS}
+    return {**cfg, **{k: salvo[k] for k in ARQUIVO_LOGO}}
 
 
 secao = st.segmented_control(
@@ -95,6 +100,34 @@ elif secao == "Alertas":
         st.caption("A nota de risco da tela Inteligência usa regras fixas, descritas no README.")
 
 elif secao == "Identidade":
+    with st.container(border=True):
+        st.subheader(":material/account_balance: Logo da instituição", anchor=False)
+        st.caption("Envie a logo oficial do Sebrae (PNG com fundo transparente ou SVG funcionam melhor). "
+                   "Ela aparece na barra lateral, na tela de login e no cabeçalho dos PDFs.")
+        atual = config_app.arquivo_logo_instituicao()
+        if atual:
+            st.image(str(atual), width=220)
+        else:
+            st.info("Nenhuma logo enviada ainda.", icon=":material/image:")
+        arq = st.file_uploader("Arquivo da logo", type=["png", "jpg", "jpeg", "svg"], key="up_logo_inst",
+                               max_upload_size=1)
+        with st.container(horizontal=True):
+            if st.button("Usar esta logo", type="primary", icon=":material/upload:", disabled=arq is None):
+                try:
+                    ext = config_app.validar_logo(arq.getvalue(), arq.name)
+                except ValueError as e:
+                    st.error(str(e))
+                else:
+                    config_app.definir_logo_instituicao(arq.getvalue(), ext)
+                    st.toast("Logo atualizada.", icon=":material/check_circle:")
+                    st.rerun()
+            if atual and st.button("Remover logo", icon=":material/delete:", type="tertiary"):
+                config_app.definir_logo_instituicao(b"", "")
+                st.rerun()
+        st.segmented_control("Onde mostrar na barra lateral", POSICOES_LOGO_INST, key="cfg_logo_inst_posicao",
+                             persist_state="page",
+                             help="No topo, ela fica no lugar da logo do app (que passa para baixo do menu)")
+
     with st.container(border=True):
         st.subheader(":material/badge: Identidade", anchor=False)
         st.text_input("Nome da plataforma", key="cfg_titulo", persist_state="page")
