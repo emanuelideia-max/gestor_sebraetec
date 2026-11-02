@@ -42,9 +42,20 @@ def main() -> None:
         sys.exit("Preencha [supabase] url e key em .streamlit/secrets.toml antes de migrar.")
 
     sb = create_client(cfg["url"], cfg["key"])
-    email = input("E-mail do usuário no Supabase: ").strip()
-    senha = getpass.getpass("Senha: ")
-    sb.auth.sign_in_with_password({"email": email, "password": senha})
+    for tentativa in range(1, 4):
+        email = input("E-mail do usuário no Supabase: ").strip()
+        senha = getpass.getpass("Senha (não aparece enquanto você digita): ")
+        try:
+            sb.auth.sign_in_with_password({"email": email, "password": senha})
+            break
+        except Exception as e:
+            msg = str(e)
+            if "not confirmed" in msg.lower():
+                print("\nE-mail ainda não confirmado. No Supabase, em Authentication → Users, confirme o usuário.\n")
+            else:
+                print(f"\nNão foi possível entrar ({msg}). Confira o e-mail e a senha. Tentativa {tentativa} de 3.\n")
+    else:
+        sys.exit("Login não realizado. Redefina a senha do usuário no Supabase e rode o script de novo.")
     print("Login ok.\n")
 
     con = sqlite3.connect(LOCAL)
